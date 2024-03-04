@@ -11,15 +11,17 @@ header {
 }
 
 nav {
+    margin-bottom: 0; /* Eliminar margen inferior */
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80px;
     padding: 0 3rem;
+    background-color: #c39422;
+    color: black;
 }
-
 .logo {
-    width: 180px;
+    width: 75px; /* Cambia el ancho del logo a 120px */
 }
 
 .logo img {
@@ -27,6 +29,7 @@ nav {
 }
 
 nav ul {
+    margin-top: 0; /* Elimina el margen superior */
     display: flex;
     gap: 40px;
     align-items: center;
@@ -46,7 +49,7 @@ nav ul li::after {
     display: block;
     height: 3px;
     width: 0;
-    background: #3081D0;
+    background: #c39422;
     margin-right: auto;
     transition: 0.5s;
 }
@@ -56,7 +59,7 @@ nav ul li:hover::after {
 }
 
 .btn{
-    background: #3081D0;
+    background: #c39422;
     color: #fff;
     padding: 10px 25px;
     border-radius: 25px;
@@ -78,13 +81,14 @@ nav ul li:hover::after {
 
 .left h1{
     font-size: 45px;
+    color: #fff;
 }
 .left h1 span{
-    color: #3081D0;
+    color: #c39422;
 }
 .left p{
     font-size: 14px;
-    color: #777;
+    color: #fff;
     padding: 20px 0;
 }
 .right img{
@@ -98,17 +102,34 @@ nav ul li:hover::after {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #3081d0;
+    border: 2px solid #c39422;
     border-radius: 50%;
     font-size: 20px;
-    color: #3081d0;
+    color: #c39422;
     text-decoration: none;
     margin: 30px 15px 30px 0 ;
     transition: .5s ease;
   }
   
   .social-media a:hover {
-    background: #3081d0;
-    color: #1f242d;
-    box-shadow: 0 0 20px #3081d0;
+    background: #c39422;
+    color: #fff;
+    box-shadow: 0 0 20px #c39422;
   }
+
+  body{
+    background-image: url('./images/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; 
+ }
+
+ #downloadButton {
+    background-color: #000;
+    color: #c39422;
+    transition: background-color 0.5s, color 0.5s; 
+}
+
+#downloadButton:hover {
+    background-color: #c39422;
+    color: #000;
+}
