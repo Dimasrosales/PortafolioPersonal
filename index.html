@@ -12,14 +12,14 @@
 <body>
     <header>
         <nav style="background-color: gold; color: black;">
-            <div class="logo"><img src="i./images/logo.jpg" alt=""></div>
+            <div class="logo"><img src="./images/logo.ico" alt=""></div>
             <ul>
                 <li><a href="">Inicio</a></li>
                 <li><a href="#SobreMi">Sobre mi</a></li>
                 <!--<li><a href="">Intereses</a></li>-->
                 <!--<li><a href="">Proyectos</a></li>-->
                 <li><a href="#social-media">Contacto</a></li>
-               <!-- <div id="google_translate_element"></div>-->
+                <div id="google_translate_element"></div>
             </ul>
         </nav>
         <div id="SobreMi" class="hero-section">
@@ -27,29 +27,33 @@
                 <h1>Hola soy <span style="background-color: d9ff00;">Israel</span></h1>
                 <p>Hola, soy Dimas Rosales. Actualmente tengo 21 años, me encuentro inmerso en la experiencia universitaria, cursando la carrera de Ingeniería en Sistemas y Redes Informáticas en Universidad Gerardo Barrios me gusta el área de Scrum.</p>
                 <button id="downloadButton" class="btn btn-outline-dark fas fa-download" onclick="descargarArchivo()">Descargar CV</button>
+                <div class="text-center social-media"> <!-- Mueve este div aquí -->
+                    <a href="https://acortar.link/JlhN5P"><i class='bx bxl-linkedin' ></i></a>
+                    <a href=""><i class='bx bxl-gmail' ></i></a>
+                </div>
             </div>
             <div class="right">
                 <img src="./images/user.png" alt="">
             </div>
         </div> 
-    <!--<script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'es'
-            }, 'google_translate_element');
-        }
-    </script>-->
-    <!--<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
-    </section>
-        <footer id="social-media" class="social-media" style="text-align: center; background-color: #000;">
-            <!--<a href=""><i class='bx bxl-facebook'></i></a>-->
-            <a href="https://www.linkedin.com/in/israel-rosales-851660290/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin' ></i></a>
-            <!--<a href=""><i class='bx bxl-instagram' ></i></a>-->
-            <!--<a href=""><i class='bx bxl-gmail'></i></a>-->
-            <!--<a href=""><i class='bx bxl-whatsapp' ></i></a>-->
-            <!--<a href=""><i class='bx bxl-github'></i></a>-->
-          </footer>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'es',
+                    includedLanguages: 'en' // Solo inglés
+                }, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </header>
+        <footer id="social-media" class="social-media text-white" style="text-align: center; background-color: #000;">
+            <h1>Mis Redes Sociales:</h1>
+            <a href=""><i class='bx bxl-facebook'></i></a>
+            <a href=""><i class='bx bxl-instagram' ></i></a>
+            <a href=""><i class='bx bxl-whatsapp' ></i></a>
+            <a href=""><i class='bx bxl-github'></i></a>
+        </footer>        
+ 
     <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
