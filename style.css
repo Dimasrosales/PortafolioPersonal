@@ -538,3 +538,15 @@ body {
     background-color: #343a40;
     color: white;
   }
+  .success-cases-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    margin: 20px;
+    width: 100%; /* Ajusta este valor según sea necesario */
+    max-width: 500px; /* Establece un ancho máximo para las cards */
+  }
+  
