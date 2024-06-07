@@ -18,4 +18,4 @@ Si eres nuevo aquí, te recomiendo que comiences por la carpeta de `proyectos` p
 
 ##LINK
 
-aqui tienes el link para que puedes visualizarlo: [https://fernando1809.github.io/Portafolio/](https://dimasrosales.github.io/PortafolioPersonal/index_en.html)
+aqui tienes el link para que puedes visualizarlo: https://dimasrosales.github.io/PortafolioPersonal/index_en.html
