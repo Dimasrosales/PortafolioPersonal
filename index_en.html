@@ -52,21 +52,42 @@
     </div>
   </div>
 
-  <section class="about" id="aboutMe">
-    <div class="container">
-      <h2>About Me</h2>
-      <div id="aboutMeSection" class="hero-section contenedor-flex">
-        <div class="left">
-          <h1>Hello, I am <span style="color: #d9ff00;">Dimas Rosales</span></h1>
-          <p>I am currently 21 years old, immersed in the university experience, studying Systems and Network Engineering at Universidad Gerardo Barrios.</p>
-          <button id="downloadButton" class="btn btn-outline-warning" onclick="descargarArchivo()"><i class="fas fa-download"></i> Download CV</button>
-        </div>
-        <div class="right">
-          <img src="./Archivos/user.png" alt="Dimas Rosales" class="img-fluid">
-        </div>
+ <section class="about" id="aboutMe">
+  <div class="container">
+    <h2>About Me</h2>
+    <div id="aboutMeSection" class="hero-section contenedor-flex">
+      <div class="left">
+        <h1>Hello, I am <span style="color: #d9ff00;">Dimas Rosales</span></h1>
+        <p>I am currently <span id="age"></span> years old, immersed in the university experience, studying Systems and Network Engineering at Universidad Gerardo Barrios.</p>
+        <button id="downloadButton" class="btn btn-outline-warning" onclick="descargarArchivo()"><i class="fas fa-download"></i> Download CV</button>
+      </div>
+      <div class="right">
+        <img src="./Archivos/user.png" alt="Dimas Rosales" class="img-fluid">
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<script>
+// Function to calculate age automatically
+function calculateAge() {
+  const birthDate = new Date(2003, 1, 6); // February 6, 2003 (month is 0-indexed)
+  const today = new Date();
+  
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
+  
+  // Adjust age if birthday hasn't occurred yet this year
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  
+  document.getElementById('age').textContent = age;
+}
+
+// Run the function when page loads
+window.addEventListener('DOMContentLoaded', calculateAge);
+</script>
 
   <section class="testimonials" id="testimonials">
     <div class="container">
@@ -76,6 +97,7 @@
           <div class="card-body">
             <blockquote class="blockquote mb-0">
               <p>A pleasant and respectful student who has the ability to manage and control software projects, in addition to demonstrating his effort and enthusiasm for success is a person who is constantly learning.</p>
+                            <p>---------------------------------</p>
               <footer class="blockquote-footer">Laura María Rivas Guerrero<cite title="Source Title"> <br> Systems and Computer Networks Engineer</cite></footer>
             </blockquote>
           </div>
@@ -84,6 +106,7 @@
           <div class="card-body">
             <blockquote class="blockquote mb-0">
               <p>He is responsible and always fulfills what is asked of him, he fulfills it to the letter, knows how to work and is passionate about his work.</p>
+                            <p>---------------------------------</p>
               <footer class="blockquote-footer">Eduardo Isaias Villegas Ortiz <cite title="Source Title"> <br>Student of Systems Engineering</cite></footer>
             </blockquote>
           </div>
@@ -92,6 +115,7 @@
           <div class="card-body">
             <blockquote class="blockquote mb-0">
               <p>I know Dimas Rosales and I can assure you that he is a very talented and dedicated person. He stands out for his ability to lead teams, motivate people, and lead complex projects to success.</p>
+                            <p>---------------------------------</p>
               <footer class="blockquote-footer">Ashli Nayeli Vigil Pineda <cite title="Source Title"> <br>Student of Systems Engineering</cite></footer>
             </blockquote>
           </div>
@@ -100,6 +124,7 @@
   <div class="card-body">
     <blockquote class="blockquote mb-0">
       <p>He is responsible and always fulfills what is asked of him to the letter. He knows how to work and is passionate about his job.</p>
+                    <p>---------------------------------</p>
       <footer class="blockquote-footer">José Walberto Rivas Guerrero <cite title="Source Title"> <br>Systems and Computer Networks Engineer</cite></footer>
     </blockquote>
   </div>

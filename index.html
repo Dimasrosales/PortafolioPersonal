@@ -52,21 +52,42 @@
     </div>
   </div>
 
-  <section class="about" id="AcercaDeMi">
-    <div class="container">
-      <h2>Acerca de mí</h2>
-      <div id="SobreMi" class="hero-section contenedor-flex">
-        <div class="left">
-          <h1>Hola soy <span style="color: #d9ff00;">Dimas Rosales</span></h1>
-          <p>Actualmente tengo 21 años, me encuentro inmerso en la experiencia universitaria, cursando la carrera de Ingeniería en Sistemas y Redes Informáticas en Universidad Gerardo Barrios.</p>
-          <button id="downloadButton" class="btn btn-outline-warning" onclick="descargarArchivo()"><i class="fas fa-download"></i> Descargar CV</button>
-        </div>
-        <div class="right">
-          <img src="./Archivos/user.png" alt="Dimas Rosales" class="img-fluid">
-        </div>
+<section class="about" id="AcercaDeMi">
+  <div class="container">
+    <h2>Acerca de mí</h2>
+    <div id="SobreMi" class="hero-section contenedor-flex">
+      <div class="left">
+        <h1>Hola soy <span style="color: #d9ff00;">Dimas Rosales</span></h1>
+        <p>Actualmente tengo <span id="edad"></span> años, me encuentro inmerso en la experiencia universitaria, cursando la carrera de Ingeniería en Sistemas y Redes Informáticas en Universidad Gerardo Barrios.</p>
+        <button id="downloadButton" class="btn btn-outline-warning" onclick="descargarArchivo()"><i class="fas fa-download"></i> Descargar CV</button>
+      </div>
+      <div class="right">
+        <img src="./Archivos/user.png" alt="Dimas Rosales" class="img-fluid">
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<script>
+// Función para calcular la edad automáticamente
+function calcularEdad() {
+  const fechaNacimiento = new Date(2003, 1, 6); // 6 de febrero de 2003 (mes 1 porque enero es 0)
+  const hoy = new Date();
+  
+  let edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+  const mes = hoy.getMonth() - fechaNacimiento.getMonth();
+  
+  // Ajustar la edad si aún no ha pasado el mes de cumpleaños
+  if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
+    edad--;
+  }
+  
+  document.getElementById('edad').textContent = edad;
+}
+
+// Ejecutar la función cuando se cargue la página
+window.onload = calcularEdad;
+</script>
 
   <section class="testimonials" id="testimonios">
     <div class="container">
@@ -76,6 +97,7 @@
           <div class="card-body">
             <blockquote class="blockquote mb-0">
               <p>Un estudiante agradable y respetuoso que tiene la capacidad de gestionar y controlar proyectos de software, además de demostrar su esfuerzo y entusiasmo por triunfar es una persona que se mantiene en constante aprendizaje.</p>
+                            <p>---------------------------------</p>
               <footer class="blockquote-footer">Laura María Rivas Guerrero<cite title="Source Title"> <br> Ingeniera en Sistemas</cite></footer>
             </blockquote>
           </div>
@@ -84,6 +106,7 @@
           <div class="card-body">
             <blockquote class="blockquote mb-0">
               <p>Es responsable y cumple siempre con lo que se le pida, lo cumple a pie de letra, sabe trabajar y es apasionado por su trabajo.</p>
+                            <p>---------------------------------</p>
               <footer class="blockquote-footer">Eduardo Isaias Villegas Ortiz <cite title="Source Title"> <br>Pasante de Ingenieria en Sistemas</cite></footer>
             </blockquote>
           </div>
@@ -92,6 +115,7 @@
           <div class="card-body">
             <blockquote class="blockquote mb-0">
               <p>Conozco a Dimas Rosales y les puedo asegurar que es una persona muy talentosa y dedicada. Destaca por su capacidad para liderar equipos, motivar personas y liderar proyectos complejos hacia el éxito.</p>
+                            <p>---------------------------------</p>
               <footer class="blockquote-footer">Ashli Nayeli Vigil Pineda <cite title="Source Title"> <br>Pasante de Ingenieria en Sistemas</cite></footer>
             </blockquote>
           </div>
@@ -100,6 +124,7 @@
           <div class="card-body">
             <blockquote class="blockquote mb-0">
               <p>Es responsable y cumple siempre con lo que se le pida, lo cumple a pie de letra, sabe trabajar y es apasionado por su trabajo.</p>
+              <p>---------------------------------</p>
               <footer class="blockquote-footer">José Walberto Rivas Guerrero <cite title="Source Title"> <br>Ingeniero en Sistemas y Redes Informaticas</cite></footer>
             </blockquote>
           </div>
